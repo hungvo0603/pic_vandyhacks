@@ -124,10 +124,10 @@ class Cali extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset('img/ill.png'),
+                      child: Image.asset('img/cali.png'),
                     ),
                     Expanded(
-                      child: Image.asset('img/ill.png'),
+                      child: Image.asset('img/cali.png'),
                     ),
                   ],
                 ),

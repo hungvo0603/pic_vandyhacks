@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vandyhack/main.dart';
 
 class Updatepage extends StatelessWidget {
   @override
@@ -14,6 +15,15 @@ class Updatepage extends StatelessWidget {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.arrow_back),
+                iconSize: 50,
+                color: Colors.teal,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyApp()));
+                },
+              ),
               SizedBox(
                 height: 80,
               ),
@@ -26,7 +36,7 @@ class Updatepage extends StatelessWidget {
                           style:
                               TextStyle(color: Colors.white70, fontSize: 50)),
                     ]),
-              )
+              ),
             ]),
       ),
     );
