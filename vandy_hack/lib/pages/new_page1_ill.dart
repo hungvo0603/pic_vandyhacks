@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vandyhack/login_page.dart';
+import 'package:vandyhack/main.dart';
 
 class ill extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -39,8 +40,8 @@ class ill extends StatelessWidget {
     Color color = Theme.of(context).primaryColor;
 
     Widget buttonSection = Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           IconButton(
             icon: Icon(Icons.account_circle),
@@ -50,7 +51,9 @@ class ill extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => SignInPage()));
             },
-          )
+          ),
+          Text('Sign in to share your stories',
+              textAlign: TextAlign.center,)
         ],
       ),
     );
@@ -72,6 +75,15 @@ class ill extends StatelessWidget {
         appBar: AppBar(
           title: Text('Vandy Hack'),
           backgroundColor: Colors.teal[200],
+          leading: new IconButton(
+            icon: new Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MyApp()),
+              );
+            },
+          ),
         ),
         body: ListView(
           children: [
