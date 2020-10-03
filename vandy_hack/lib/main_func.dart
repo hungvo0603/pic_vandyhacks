@@ -30,29 +30,35 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        backgroundColor: Colors.teal[200],
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              decoration: BoxDecoration(
-                //image: DecorationImage(
-                //fit: BoxFit.fill,
-                //image:  AssetImage('path/to/header_background.png')),
-                color: Colors.blue,
-              ),
-              child: Text(
-                'List of the states',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.fill, image: AssetImage('img/map.png')),
+                  //color: Colors.blue,
                 ),
-              ),
-            ),
+                child: Stack(children: <Widget>[
+                  Positioned(
+                      bottom: 12.0,
+                      left: 16.0,
+                      child: Text("List of States",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.w500))),
+                ])),
             ListTile(
               title: Text('California'),
               trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/cali.png"), // no matter how big it is, it won't overflow
+              ),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SecondRoute()));
@@ -62,6 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text('Florida'),
               trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/florida.png"), // no matter how big it is, it won't overflow
+              ),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SecondRoute()));
@@ -71,6 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text('New York'),
               trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/NY.png"), // no matter how big it is, it won't overflow
+              ),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SecondRoute()));
@@ -80,6 +94,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text('Illinois'),
               trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/ill.png"), // no matter how big it is, it won't overflow
+              ),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SecondRoute()));
@@ -89,6 +107,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text('Texas'),
               trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/Texas.png"), // no matter how big it is, it won't overflow
+              ),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SecondRoute()));
@@ -98,6 +120,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text('Washington'),
               trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/Washing.png"), // no matter how big it is, it won't overflow
+              ),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SecondRoute()));
@@ -107,6 +133,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text(' Hawaii'),
               trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/Hawaii.png"), // no matter how big it is, it won't overflow
+              ),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SecondRoute()));
@@ -116,6 +146,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text('Massachusetts'),
               trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/Mass.png"), // no matter how big it is, it won't overflow
+              ),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => SecondRoute()));
