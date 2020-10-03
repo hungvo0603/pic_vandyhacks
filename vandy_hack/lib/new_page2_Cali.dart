@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vandyhack/main.dart';
 
-class SecondRoute extends StatelessWidget {
+class Cali extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget titleSection = Container(
       padding: const EdgeInsets.all(32),
@@ -16,7 +16,7 @@ class SecondRoute extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    'State of Illinois',
+                    'State of California',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -65,6 +65,8 @@ class SecondRoute extends StatelessWidget {
       ),
     );
 
+
+
     return MaterialApp(
       title: 'Flutter layout demo',
       home: Scaffold(
@@ -74,7 +76,7 @@ class SecondRoute extends StatelessWidget {
         body: ListView(
           children: [
             Image.asset(
-              'img/ill.png',
+              'img/cali.png',
               width: 600,
               height: 240,
               fit: BoxFit.cover,
@@ -82,7 +84,7 @@ class SecondRoute extends StatelessWidget {
             titleSection,
             buttonSection,
             textSection,
-          ],
+        ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {

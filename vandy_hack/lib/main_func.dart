@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vandyhack/new_page1.dart';
+import 'package:vandyhack/new_page2_Cali.dart';
+import 'package:vandyhack/new_page3_ny.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -61,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondRoute()));
+                    MaterialPageRoute(builder: (context) => Cali()));
                 //Navigator.pop(context);
               },
             ),
@@ -87,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondRoute()));
+                    MaterialPageRoute(builder: (context) => Ny()));
                 //Navigator.pop(context);
               },
             ),

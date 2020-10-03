@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vandyhack/main.dart';
 
-class SecondRoute extends StatelessWidget {
+class Ny extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget titleSection = Container(
       padding: const EdgeInsets.all(32),
@@ -16,7 +16,7 @@ class SecondRoute extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    'State of Illinois',
+                    'State of New York',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -74,7 +74,7 @@ class SecondRoute extends StatelessWidget {
         body: ListView(
           children: [
             Image.asset(
-              'img/ill.png',
+              'img/NY.png',
               width: 600,
               height: 240,
               fit: BoxFit.cover,
