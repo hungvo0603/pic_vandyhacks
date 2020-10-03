@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vandyhack/main_func.dart';
 
 import 'MyHomePage.dart';
 
@@ -25,4 +26,3 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
-}
