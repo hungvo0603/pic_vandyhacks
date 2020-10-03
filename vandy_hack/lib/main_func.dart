@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vandyhack/pages/new_page1_ill.dart';
 import 'package:vandyhack/pages/new_page2_Cali.dart';
@@ -29,10 +30,76 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+          Colors.teal[200],
+          Colors.teal[600],
+          Colors.teal[800]
+        ])),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SizedBox(
+                height: 80,
+              ),
+              Padding(
+                padding: EdgeInsets.all(30),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text("RETRO : COVID-19 Edition",
+                          style:
+                              TextStyle(color: Colors.white70, fontSize: 60)),
+                    ]),
+              ),
+              Expanded(
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 240,
+                  child: Stack(children: <Widget>[
+                    Positioned(
+                        child: Container(
+                      child: Align(
+                        child: Container(
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.white70),
+                          width: 200,
+                          height: 150,
+                        ),
+                        alignment: Alignment.center,
+                      ),
+                      height: 154,
+                    )),
+                    Positioned(
+                      width: 60,
+                      height: 60,
+                      top: 140,
+                      left: 260,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.white70),
+                      ),
+                    ),
+                    Positioned(
+                      width: 30,
+                      height: 30,
+                      top: 200,
+                      left: 230,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle, color: Colors.white70),
+                      ),
+                    ),
+                  ]),
+                ),
+              ),
+            ]),
+      ),
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: const Text('Touch the drawer to begin'),
         backgroundColor: Colors.teal[200],
       ),
       drawer: Drawer(
@@ -69,19 +136,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Florida'),
-              trailing: Icon(Icons.arrow_right),
-              leading: CircleAvatar(
-                backgroundImage: AssetImage(
-                    "img/florida.png"), // no matter how big it is, it won't overflow
-              ),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Updatepage()));
-                //Navigator.pop(context);
-              },
-            ),
-            ListTile(
               title: Text('New York'),
               trailing: Icon(Icons.arrow_right),
               leading: CircleAvatar(
@@ -104,6 +158,19 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => ill()));
+                //Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Florida'),
+              trailing: Icon(Icons.arrow_right),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(
+                    "img/florida.png"), // no matter how big it is, it won't overflow
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Updatepage()));
                 //Navigator.pop(context);
               },
             ),
