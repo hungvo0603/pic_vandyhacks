@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:vandyhack/new_page1.dart';
-import 'package:vandyhack/new_page2_Cali.dart';
-import 'package:vandyhack/new_page3_ny.dart';
+import 'package:vandyhack/pages/new_page1_ill.dart';
+import 'package:vandyhack/pages/new_page2_Cali.dart';
+import 'package:vandyhack/pages/new_page3_ny.dart';
+import 'package:vandyhack/pages/updatingpage.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -62,8 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     "img/cali.png"), // no matter how big it is, it won't overflow
               ),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Cali()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Cali()));
                 //Navigator.pop(context);
               },
             ),
@@ -76,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondRoute()));
+                    MaterialPageRoute(builder: (context) => Updatepage()));
                 //Navigator.pop(context);
               },
             ),
@@ -88,8 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     "img/NY.png"), // no matter how big it is, it won't overflow
               ),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Ny()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Ny()));
                 //Navigator.pop(context);
               },
             ),
@@ -101,8 +102,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     "img/ill.png"), // no matter how big it is, it won't overflow
               ),
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondRoute()));
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => ill()));
                 //Navigator.pop(context);
               },
             ),
@@ -115,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondRoute()));
+                    MaterialPageRoute(builder: (context) => Updatepage()));
                 //Navigator.pop(context);
               },
             ),
@@ -128,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondRoute()));
+                    MaterialPageRoute(builder: (context) => Updatepage()));
                 //Navigator.pop(context);
               },
             ),
@@ -141,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondRoute()));
+                    MaterialPageRoute(builder: (context) => Updatepage()));
                 //Navigator.pop(context);
               },
             ),
@@ -154,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SecondRoute()));
+                    MaterialPageRoute(builder: (context) => Updatepage()));
                 //Navigator.pop(context);
               },
             ),
