@@ -32,11 +32,6 @@ class ill extends StatelessWidget {
             ),
           ),
           /*3*/
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Text('41'),
         ],
       ),
     );
@@ -46,8 +41,16 @@ class ill extends StatelessWidget {
     Widget buttonSection = Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          _buildButtonColumn(Colors.teal, Icons.share, 'SHARE'),
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.account_circle),
+            iconSize: 50,
+            color: Colors.teal,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SignInPage()));
+            },
+          )
         ],
       ),
     );
@@ -84,14 +87,6 @@ class ill extends StatelessWidget {
             buttonSection,
             textSection,
           ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => SignInPage()));
-          },
-          child: Icon(Icons.account_circle),
-          backgroundColor: Colors.grey[400],
         ),
       ),
     );

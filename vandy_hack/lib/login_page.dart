@@ -29,13 +29,13 @@ class SignInPage extends StatelessWidget {
                     height: 80,
                   ),
                   Padding(
-                    padding: EdgeInsets.all(20),
+                    padding: EdgeInsets.all(30),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text("Login",
                               style: TextStyle(
-                                  color: Colors.white70, fontSize: 40)),
+                                  color: Colors.white70, fontSize: 60)),
                         ]),
                   ),
                   Expanded(

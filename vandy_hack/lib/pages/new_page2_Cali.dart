@@ -31,12 +31,6 @@ class Cali extends StatelessWidget {
               ],
             ),
           ),
-          /*3*/
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Text('41'),
         ],
       ),
     );
@@ -47,7 +41,15 @@ class Cali extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _buildButtonColumn(Colors.teal, Icons.share, 'SHARE'),
+          IconButton(
+            icon: Icon(Icons.account_circle),
+            iconSize: 50,
+            color: Colors.teal,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SignInPage()));
+            },
+          )
         ],
       ),
     );
@@ -84,14 +86,6 @@ class Cali extends StatelessWidget {
             buttonSection,
             textSection,
           ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => SignInPage()));
-          },
-          child: Icon(Icons.account_circle),
-          backgroundColor: Colors.grey[400],
         ),
       ),
     );
