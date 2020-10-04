@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "108334500549",
-    "firebase_url": "https://vandyhack-33826.firebaseio.com",
-    "project_id": "vandyhack-33826",
-    "storage_bucket": "vandyhack-33826.appspot.com"
+    "project_number": "599307203252",
+    "firebase_url": "https://retro-covid-19-edition.firebaseio.com",
+    "project_id": "retro-covid-19-edition",
+    "storage_bucket": "retro-covid-19-edition.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:108334500549:android:7b9defc122578171acbeac",
+        "mobilesdk_app_id": "1:599307203252:android:3f0e72782a2fe492b61de1",
         "android_client_info": {
           "package_name": "com.example.vandyhack"
         }
       },
       "oauth_client": [
         {
-          "client_id": "108334500549-7tgn6vm1km7ap7u924fh8p2j8v3303ek.apps.googleusercontent.com",
+          "client_id": "599307203252-qfj1brlpt1vqdnepcffjsetfcam6g63a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyArbfO67bc4k4TXcsjmvryzSD9cgS-VPsc"
+          "current_key": "AIzaSyCLmpV2d_cv2T0TcoY41Ai-hL4D9BOF41s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "108334500549-7tgn6vm1km7ap7u924fh8p2j8v3303ek.apps.googleusercontent.com",
+              "client_id": "599307203252-qfj1brlpt1vqdnepcffjsetfcam6g63a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
