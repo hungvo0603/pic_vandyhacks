@@ -17,6 +17,27 @@ class _SharingPageState extends State<SharingPage> {
       appBar: AppBar(
         title: Text('Welcome ${widget.User.user.email}'),
       ),
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+          Colors.teal[200],
+          Colors.teal[600],
+          Colors.teal[200]
+        ])),
+        child: Form(
+          child: Column(
+            children: <Widget>[
+              TextFormField(
+                decoration: InputDecoration(
+                    icon: Icon(Icons.text_fields),
+                    hintText: "Share your story here",
+                    labelText: "Input here: "),
+                onSaved: (String value) {},
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

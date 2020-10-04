@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                     return 'Please enter an Email';
                   }
                 },
-                onSaved: (input) => _email = input,
+                onChanged: (input) => _email = input,
                 decoration: InputDecoration(labelText: 'Email'),
               ),
               TextFormField(
@@ -47,7 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                     return 'Your can not left the password empty';
                   }
                 },
-                onSaved: (input) => _email = input,
+                onChanged: (input) => _password = input,
                 decoration: InputDecoration(labelText: 'Password'),
                 obscureText: true,
               ),
@@ -79,8 +79,12 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.of(context).pop();
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => SharingPage(User: user)));
-      } catch (e) {
-        print(e.message);
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'user-not-found') {
+          print('No user found for that email.');
+        } else if (e.code == 'wrong-password') {
+          print('Wrong password provided for that user.');
+        }
       }
     }
   }

@@ -69,7 +69,7 @@ class SignInPage extends StatelessWidget {
                         SignInButton(
                           Buttons.GoogleDark,
                           onPressed: () {
-                             // CONTEXT
+                            // CONTEXT
                           },
                         ),
                         Divider(),
