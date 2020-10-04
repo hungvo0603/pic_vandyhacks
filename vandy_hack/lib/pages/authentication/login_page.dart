@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:vandyhack/pages/authentication/authen.dart';
 
 class SignInPage extends StatelessWidget {
   /// Show a simple "___ Button Pressed" indicator
@@ -47,6 +48,10 @@ class SignInPage extends StatelessWidget {
                           icon: Icons.email,
                           onPressed: () {
                             _showButtonPressDialog(context, 'Email');
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => LoginPage()));
                           },
                           backgroundColor: Colors.blueGrey[700],
                           width: 220.0,
@@ -56,13 +61,6 @@ class SignInPage extends StatelessWidget {
                           Buttons.GoogleDark,
                           onPressed: () {
                             _showButtonPressDialog(context, 'Google (dark)');
-                          },
-                        ),
-                        Divider(),
-                        SignInButton(
-                          Buttons.FacebookNew,
-                          onPressed: () {
-                            _showButtonPressDialog(context, 'FacebookNew');
                           },
                         ),
                         Divider(),
