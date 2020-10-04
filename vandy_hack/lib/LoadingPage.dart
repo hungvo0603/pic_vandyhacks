@@ -8,10 +8,10 @@ class LoadingPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-              Colors.teal[800],
-              Colors.teal[600],
-              Colors.teal[200]
-            ])),
+          Colors.teal[800],
+          Colors.teal[600],
+          Colors.teal[200]
+        ])),
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -34,7 +34,7 @@ class LoadingPage extends StatelessWidget {
                     children: <Widget>[
                       Text("Loading ...",
                           style:
-                          TextStyle(color: Colors.white70, fontSize: 50)),
+                              TextStyle(color: Colors.white70, fontSize: 50)),
                     ]),
               ),
             ]),

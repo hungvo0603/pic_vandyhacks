@@ -61,12 +61,12 @@ class Cali extends StatelessWidget {
       child: Text(
         ' 819,436 Positive - 16,074 deaths - 14,998,888 tests \n'
         ' Updated October 3, 2020 at 11:00 AM   \n \n '
-        ' Unable to stop the spread completely, on March 19 Newsom became the first governor to issue a shelter-in-place mandate.'
-        ' Disneyland and movie theaters are closed but grocery stores and pharmacies are open '
-        'tate regulators loosened restrictions on alcohol and cannabis'
-        ' Restaurants can sell cocktails to go and weed customers can receive contactless deliveries...'
+        '+ Unable to stop the spread completely, on March 19 Newsom became the first governor to issue a shelter-in-place mandate.'
+        '+ Disneyland and movie theaters are closed but grocery stores and pharmacies are open \n '
+        '+ state regulators loosened restrictions on alcohol and cannabis\n'
+        '+ Restaurants can sell cocktails to go and weed customers can receive contactless deliveries...\n'
         '(calmatters.org/explainers/coronavirus-california-explained-newsom/) \n'
-        ' for more information check: https://covid19.ca.gov/',
+        '+ for more information check: https://covid19.ca.gov/',
         softWrap: true,
       ),
     );
@@ -100,6 +100,13 @@ class Cali extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text('Before'),
+                    Text('After'),
+                  ],
+                ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [

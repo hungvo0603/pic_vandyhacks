@@ -36,17 +36,17 @@ class _SignUpPageState extends State<SignUpPage> {
                       return 'Please enter an Email';
                     }
                   },
-                  onSaved: (input) => _email = input,
+                  onChanged: (input) => _email = input,
                   decoration: InputDecoration(labelText: 'Email'),
                 ),
                 TextFormField(
                   // ignore: missing_return
                   validator: (input) {
-                    if (input.isEmpty) {
-                      return 'Your can not left the password empty';
+                    if (input.length < 6) {
+                      return 'Your password is too weak';
                     }
                   },
-                  onSaved: (input) => _email = input,
+                  onChanged: (input) => _password = input,
                   decoration: InputDecoration(labelText: 'Password'),
                   obscureText: true,
                 ),
@@ -69,6 +69,12 @@ class _SignUpPageState extends State<SignUpPage> {
             .createUserWithEmailAndPassword(email: _email, password: _password);
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => SharingPage(User: user)));
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'weak-password') {
+          print('The password provided is too weak.');
+        } else if (e.code == 'email-already-in-use') {
+          print('The account already exists for that email.');
+        }
       } catch (e) {
         print(e.message);
       }
