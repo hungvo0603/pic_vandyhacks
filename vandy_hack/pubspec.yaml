@@ -28,8 +28,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_signin_button: ^1.1.0
-  firebase_auth: ^0.14.0+5
+  firebase_auth: ^0.18.1+1
   google_sign_in: ^4.5.1
+  firebase_core: ^0.5.0
+  cloud_firestore: ^0.14.1+2
+
 
 
 # For information on the generic Dart part of this file, see the
@@ -62,6 +65,10 @@ flutter:
     - img/ill_2_1.jpg
     - img/ny_0_0.png
     - img/ny_0_1.png
+    - img/ny_1_0.jpg
+    - img/ny_1_1.jpg
+    - img/ny_2_0.jpg
+    - img/ny_2_1.jpg
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vandyhack/login_page.dart';
+import 'package:vandyhack/pages/authentication/login_page.dart';
 import 'package:vandyhack/main.dart';
 
 class Cali extends StatelessWidget {

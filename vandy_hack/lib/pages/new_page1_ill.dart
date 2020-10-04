@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vandyhack/login_page.dart';
+import 'package:vandyhack/pages/authentication/login_page.dart';
 import 'package:vandyhack/main.dart';
 
 class ill extends StatelessWidget {
@@ -98,6 +98,13 @@ class ill extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children:[
+                    Text('Before'),
+                    Text('After'),
+                  ],
+                ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [

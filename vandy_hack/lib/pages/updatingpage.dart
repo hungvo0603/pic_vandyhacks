@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vandyhack/main.dart';
 
-class Updatepage extends StatelessWidget {
+class UpdatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
