@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vandyhack/pages/authentication/login_page.dart';
 import 'package:vandyhack/main.dart';
+import 'package:vandyhack/pages/authentication/login_page.dart';
 
 class Ny extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -44,8 +44,10 @@ class Ny extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => SignInPage()));
                 },
               ),
-              Text('Share your stories',
-                textAlign: TextAlign.center,)
+              Text(
+                'Share your stories',
+                textAlign: TextAlign.center,
+              )
             ],
           ),
         ],
@@ -54,12 +56,11 @@ class Ny extends StatelessWidget {
 
     Color color = Theme.of(context).primaryColor;
 
-
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: Text(
         '240,873 Positive - 19,207 deaths - 59,345 Hospitalizations \n'
-            '(Last updated 10/03/2020)\n \n'
+        '(Last updated 10/03/2020)\n \n'
         '+ check www1.nyc.gov/site/doh/covid/covid-19-data.page         '
         '               ',
         softWrap: true,
@@ -67,10 +68,10 @@ class Ny extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Vandy Hack',
+      title: 'Retro : Covid-19',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Vandy Hack'),
+          title: Text('Retro : Covid-19'),
           backgroundColor: Colors.teal[200],
           leading: new IconButton(
             icon: new Icon(Icons.arrow_back),
@@ -97,7 +98,7 @@ class Ny extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children:[
+                  children: [
                     Text('Before'),
                     Text('After'),
                   ],

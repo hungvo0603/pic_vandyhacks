@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vandyhack/pages/authentication/login_page.dart';
 import 'package:vandyhack/main.dart';
+import 'package:vandyhack/pages/authentication/login_page.dart';
 
 class Cali extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -44,8 +44,10 @@ class Cali extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => SignInPage()));
                 },
               ),
-              Text('Share your stories',
-                textAlign: TextAlign.center,)
+              Text(
+                'Share your stories',
+                textAlign: TextAlign.center,
+              )
             ],
           ),
         ],
@@ -53,7 +55,6 @@ class Cali extends StatelessWidget {
     );
 
     Color color = Theme.of(context).primaryColor;
-
 
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
@@ -67,10 +68,10 @@ class Cali extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Vandy Hack',
+      title: 'Retro : Covid-19',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Vandy Hack'),
+          title: Text('Retro : Covid-19'),
           backgroundColor: Colors.teal[200],
           leading: new IconButton(
             icon: new Icon(Icons.arrow_back),
@@ -132,7 +133,7 @@ class Cali extends StatelessWidget {
             ),
           ],
         ),
-        ),
+      ),
     );
   }
 

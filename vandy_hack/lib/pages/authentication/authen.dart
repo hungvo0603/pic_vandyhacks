@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vandyhack/pages/authentication/SharingPage.dart';
+import 'package:vandyhack/pages/authentication/sign_up.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -16,6 +17,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Sign in'),
+        backgroundColor: Colors.teal[200],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -41,8 +43,8 @@ class _LoginPageState extends State<LoginPage> {
               TextFormField(
                 // ignore: missing_return
                 validator: (input) {
-                  if (input.length < 6) {
-                    return 'Your password is not strong enough';
+                  if (input.isEmpty) {
+                    return 'Your can not left the password empty';
                   }
                 },
                 onSaved: (input) => _email = input,
@@ -52,7 +54,13 @@ class _LoginPageState extends State<LoginPage> {
               RaisedButton(
                 onPressed: SignIn,
                 child: Text('Sign in'),
-              )
+              ),
+              RaisedButton(
+                  child: Text('Sign up'),
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => SignUpPage()));
+                  })
             ],
           ),
         ),
@@ -67,6 +75,7 @@ class _LoginPageState extends State<LoginPage> {
       try {
         UserCredential user = await FirebaseAuth.instance
             .signInWithEmailAndPassword(email: _email, password: _password);
+        Navigator.of(context).pop();
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => SharingPage(User: user)));
       } catch (e) {
