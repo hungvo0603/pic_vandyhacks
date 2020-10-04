@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:vandyhack/main.dart';
 import 'package:vandyhack/pages/authentication/authen.dart';
 
 class SignInPage extends StatelessWidget {
@@ -26,6 +27,15 @@ class SignInPage extends StatelessWidget {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.arrow_back),
+                    iconSize: 50,
+                    color: Colors.teal,
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MyApp()));
+                    },
+                  ),
                   SizedBox(
                     height: 80,
                   ),

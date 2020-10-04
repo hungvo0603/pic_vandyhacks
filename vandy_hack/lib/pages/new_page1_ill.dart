@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vandyhack/pages/authentication/login_page.dart';
 import 'package:vandyhack/main.dart';
+import 'package:vandyhack/pages/authentication/login_page.dart';
 
 class ill extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -45,8 +45,10 @@ class ill extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => SignInPage()));
                 },
               ),
-              Text('Share your stories',
-                textAlign: TextAlign.center,)
+              Text(
+                'Share your stories',
+                textAlign: TextAlign.center,
+              )
             ],
           ),
         ],
@@ -58,22 +60,22 @@ class ill extends StatelessWidget {
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: Text(
-            ' 300,088 Positive - 8,774 deaths - 5,834,762 tests \n'
-            '      (Last updated 10/03/2020 12:00 PM)         \n \n'
-            ' + Illinois has seen an unprecedented number of \n'
-              'unemployment claims during this challenging time \n'
-            ' + On July 15th, Governor Pritzker and the Illinois Department of Public Health announced a new COVID-19 mitigation plan focused on combating a resurgence of cases will maintaining the progress the state has made towards bending the curve over the last four months \n'
-                ' + Illinois remains an outlier with lower hospitalization and infection rates and one of the highest rates of testing in the U.S. The resurgence plan recognizes that the state is in its strongest position to combat the virus since the pandemic began  \n'
-            ' For more information, check https://coronavirus.illinois.gov/s/',
+        ' 300,088 Positive - 8,774 deaths - 5,834,762 tests \n'
+        '      (Last updated 10/03/2020 12:00 PM)         \n \n'
+        ' + Illinois has seen an unprecedented number of \n'
+        'unemployment claims during this challenging time \n'
+        ' + On July 15th, Governor Pritzker and the Illinois Department of Public Health announced a new COVID-19 mitigation plan focused on combating a resurgence of cases will maintaining the progress the state has made towards bending the curve over the last four months \n'
+        ' + Illinois remains an outlier with lower hospitalization and infection rates and one of the highest rates of testing in the U.S. The resurgence plan recognizes that the state is in its strongest position to combat the virus since the pandemic began  \n'
+        ' For more information, check https://coronavirus.illinois.gov/s/',
         softWrap: true,
       ),
     );
 
     return MaterialApp(
-      title: 'Vandy Hack',
+      title: 'Retro : Covid-19',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Vandy Hack'),
+          title: Text('Retro : Covid-19'),
           backgroundColor: Colors.teal[200],
           leading: new IconButton(
             icon: new Icon(Icons.arrow_back),
@@ -100,7 +102,7 @@ class ill extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children:[
+                  children: [
                     Text('Before'),
                     Text('After'),
                   ],
