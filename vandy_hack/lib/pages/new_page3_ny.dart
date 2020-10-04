@@ -32,30 +32,28 @@ class Ny extends StatelessWidget {
               ],
             ),
           ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.account_circle),
+                iconSize: 50,
+                color: Colors.teal,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignInPage()));
+                },
+              ),
+              Text('Share your stories',
+                textAlign: TextAlign.center,)
+            ],
+          ),
         ],
       ),
     );
 
     Color color = Theme.of(context).primaryColor;
 
-    Widget buttonSection = Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          IconButton(
-            icon: Icon(Icons.account_circle),
-            iconSize: 50,
-            color: Colors.teal,
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignInPage()));
-            },
-          ),
-          Text('Sign in to share your stories',
-            textAlign: TextAlign.center,)
-        ],
-      ),
-    );
 
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
@@ -93,7 +91,6 @@ class Ny extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             titleSection,
-            buttonSection,
             textSection,
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -102,10 +99,10 @@ class Ny extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset('img/NY.png'),
+                      child: Image.asset('img/ny_0_0.png'),
                     ),
                     Expanded(
-                      child: Image.asset('img/NY.png'),
+                      child: Image.asset('img/ny_0_1.png'),
                     ),
                   ],
                 ),

@@ -33,38 +33,38 @@ class ill extends StatelessWidget {
             ),
           ),
           /*3*/
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.account_circle),
+                iconSize: 50,
+                color: Colors.teal,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignInPage()));
+                },
+              ),
+              Text('Share your stories',
+                textAlign: TextAlign.center,)
+            ],
+          ),
         ],
       ),
     );
 
     Color color = Theme.of(context).primaryColor;
 
-    Widget buttonSection = Container(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          IconButton(
-            icon: Icon(Icons.account_circle),
-            iconSize: 50,
-            color: Colors.teal,
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignInPage()));
-            },
-          ),
-          Text('Sign in to share your stories',
-              textAlign: TextAlign.center,)
-        ],
-      ),
-    );
-
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: Text(
-        'Description box'
-            '               '
-            '               '
-            '               ',
+            ' 300,088 Positive - 8,774 deaths - 5,834,762 tests \n'
+            '      (Last updated 10/03/2020 12:00 PM)         \n \n'
+            ' + Illinois has seen an unprecedented number of \n'
+              'unemployment claims during this challenging time \n'
+            ' + On July 15th, Governor Pritzker and the Illinois Department of Public Health announced a new COVID-19 mitigation plan focused on combating a resurgence of cases will maintaining the progress the state has made towards bending the curve over the last four months \n'
+                ' + Illinois remains an outlier with lower hospitalization and infection rates and one of the highest rates of testing in the U.S. The resurgence plan recognizes that the state is in its strongest position to combat the virus since the pandemic began  \n'
+            ' For more information, check https://coronavirus.illinois.gov/s/',
         softWrap: true,
       ),
     );
@@ -94,7 +94,6 @@ class ill extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             titleSection,
-            buttonSection,
             textSection,
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -103,21 +102,10 @@ class ill extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset('img/ill.png'),
+                      child: Image.asset('img/ill_0_0.png'),
                     ),
                     Expanded(
-                      child: Image.asset('img/ill.png'),
-                    ),
-                  ],
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset('img/ill.png'),
-                    ),
-                    Expanded(
-                      child: Image.asset('img/ill.png'),
+                      child: Image.asset('img/ill_0_1.png'),
                     ),
                   ],
                 ),
@@ -125,10 +113,21 @@ class ill extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset('img/ill.png'),
+                      child: Image.asset('img/ill_1_0.jpg'),
                     ),
                     Expanded(
-                      child: Image.asset('img/ill.png'),
+                      child: Image.asset('img/ill_1_1.jpg'),
+                    ),
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Image.asset('img/ill_2_0.jpg'),
+                    ),
+                    Expanded(
+                      child: Image.asset('img/ill_2_1.jpg'),
                     ),
                   ],
                 ),
