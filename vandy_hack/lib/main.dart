@@ -1,11 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:vandyhack/LoadingPage.dart';
-import 'package:vandyhack/main_func.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:vandyhack/main_func.dart';
 
-import 'SomethingWentWrong.dart';
-
-void main() => runApp(MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // Create the initialization Future outside of `build`:
@@ -16,12 +17,15 @@ class MyApp extends StatelessWidget {
     return FutureBuilder(
       // Initialize FlutterFire:
       future: _initialization,
+      // ignore: missing_return
       builder: (context, snapshot) {
-        return IntroPage();
+        // Check for errors
+        if (snapshot.connectionState == ConnectionState.done) {
+          return IntroPage();
+        }
       },
     );
   }
-
 }
 
 class IntroPage extends StatelessWidget {
