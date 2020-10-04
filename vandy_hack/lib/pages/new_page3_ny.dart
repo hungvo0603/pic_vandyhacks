@@ -58,9 +58,9 @@ class Ny extends StatelessWidget {
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: Text(
-        'Description box'
-        '               '
-        '               '
+        '240,873 Positive - 19,207 deaths - 59,345 Hospitalizations \n'
+            '(Last updated 10/03/2020)\n \n'
+        '+ check www1.nyc.gov/site/doh/covid/covid-19-data.page         '
         '               ',
         softWrap: true,
       ),
@@ -96,6 +96,13 @@ class Ny extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children:[
+                    Text('Before'),
+                    Text('After'),
+                  ],
+                ),
+                Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
@@ -110,10 +117,10 @@ class Ny extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset('img/NY.png'),
+                      child: Image.asset('img/ny_1_0.jpg'),
                     ),
                     Expanded(
-                      child: Image.asset('img/NY.png'),
+                      child: Image.asset('img/ny_1_1.jpg'),
                     ),
                   ],
                 ),
@@ -121,10 +128,10 @@ class Ny extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Image.asset('img/NY.png'),
+                      child: Image.asset('img/ny_2_1.jpg'),
                     ),
                     Expanded(
-                      child: Image.asset('img/NY.png'),
+                      child: Image.asset('img/ny_2_0.jpg'),
                     ),
                   ],
                 ),

@@ -123,15 +123,15 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontWeight: FontWeight.w500))),
                 ])),
             ListTile(
-              title: Text('California'),
+              title: Text('Illinois'),
               trailing: Icon(Icons.arrow_right),
               leading: CircleAvatar(
                 backgroundImage: AssetImage(
-                    "img/cali.png"), // no matter how big it is, it won't overflow
+                    "img/ill.png"), // no matter how big it is, it won't overflow
               ),
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Cali()));
+                    context, MaterialPageRoute(builder: (context) => ill()));
                 //Navigator.pop(context);
               },
             ),
@@ -149,15 +149,15 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Illinois'),
+              title: Text('California'),
               trailing: Icon(Icons.arrow_right),
               leading: CircleAvatar(
                 backgroundImage: AssetImage(
-                    "img/ill.png"), // no matter how big it is, it won't overflow
+                    "img/cali.png"), // no matter how big it is, it won't overflow
               ),
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => ill()));
+                    context, MaterialPageRoute(builder: (context) => Cali()));
                 //Navigator.pop(context);
               },
             ),
