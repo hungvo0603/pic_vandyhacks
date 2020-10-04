@@ -12,8 +12,7 @@ class _ContentPageState extends State<ContentPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-      ),
+      appBar: AppBar(),
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, colors: [
@@ -21,7 +20,7 @@ class _ContentPageState extends State<ContentPage> {
           Colors.teal[600],
           Colors.teal[200]
         ])),
-        child: Form(),
+        child: Column(),
       ),
     );
   }
