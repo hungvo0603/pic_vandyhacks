@@ -13,7 +13,6 @@ class _ContentPageState extends State<ContentPage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome ${widget.User.user.email}'),
       ),
       body: Container(
         decoration: BoxDecoration(
