@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vandyhack/login_page.dart';
 import 'package:vandyhack/main.dart';
+import 'package:vandyhack/pages/authentication/login_page.dart';
 
 class ill extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -52,8 +52,10 @@ class ill extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => SignInPage()));
             },
           ),
-          Text('Sign in to share your stories',
-              textAlign: TextAlign.center,)
+          Text(
+            'Sign in to share your stories',
+            textAlign: TextAlign.center,
+          )
         ],
       ),
     );
@@ -62,9 +64,9 @@ class ill extends StatelessWidget {
       padding: const EdgeInsets.all(32),
       child: Text(
         'Description box'
-            '               '
-            '               '
-            '               ',
+        '               '
+        '               '
+        '               ',
         softWrap: true,
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vandyhack/login_page.dart';
 import 'package:vandyhack/main.dart';
+import 'package:vandyhack/pages/authentication/login_page.dart';
 
 class Ny extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -51,8 +51,10 @@ class Ny extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => SignInPage()));
             },
           ),
-          Text('Sign in to share your stories',
-            textAlign: TextAlign.center,)
+          Text(
+            'Sign in to share your stories',
+            textAlign: TextAlign.center,
+          )
         ],
       ),
     );
