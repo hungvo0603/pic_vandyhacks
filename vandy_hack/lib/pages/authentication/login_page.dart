@@ -28,10 +28,10 @@ class _SignInPageState extends State<SignInPage> {
         body: Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-              Colors.teal[800],
-              Colors.teal[600],
-              Colors.teal[200]
-            ])),
+                  Colors.teal[800],
+                  Colors.teal[600],
+                  Colors.teal[200]
+                ])),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -61,26 +61,26 @@ class _SignInPageState extends State<SignInPage> {
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                        SignInButtonBuilder(
-                          text: 'Get going with Email',
-                          icon: Icons.email,
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginPage()));
-                          },
-                          backgroundColor: Colors.blueGrey[700],
-                          width: 220.0,
-                        ),
-                        Divider(),
-                        SignInButton(
-                          Buttons.GoogleDark,
-                          onPressed: signInWithGoogle,
-                          // CONTEX
-                        ),
-                        Divider(),
-                      ])),
+                            SignInButtonBuilder(
+                              text: 'Get going with Email',
+                              icon: Icons.email,
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LoginPage()));
+                              },
+                              backgroundColor: Colors.blueGrey[700],
+                              width: 220.0,
+                            ),
+                            Divider(),
+                            SignInButton(
+                              Buttons.GoogleDark,
+                              onPressed: signInWithGoogle,
+                              // CONTEX
+                            ),
+                            Divider(),
+                          ])),
                 ])));
   }
 
@@ -90,7 +90,7 @@ class _SignInPageState extends State<SignInPage> {
 
     // Obtain the auth details from the request
     final GoogleSignInAuthentication googleAuth =
-        await googleUser.authentication;
+    await googleUser.authentication;
 
     // Create a new credential
     final GoogleAuthCredential credential = GoogleAuthProvider.credential(
@@ -101,8 +101,8 @@ class _SignInPageState extends State<SignInPage> {
         context,
         MaterialPageRoute(
             builder: (context) => SharingPage(
-                  User: null,
-                )));
+              User: null,
+            )));
     // Once signed in, return the UserCredential
 
     return await FirebaseAuth.instance.signInWithCredential(credential);
