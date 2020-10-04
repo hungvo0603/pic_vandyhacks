@@ -47,7 +47,6 @@ class SignInPage extends StatelessWidget {
                           text: 'Get going with Email',
                           icon: Icons.email,
                           onPressed: () {
-                            _showButtonPressDialog(context, 'Email');
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -60,7 +59,7 @@ class SignInPage extends StatelessWidget {
                         SignInButton(
                           Buttons.GoogleDark,
                           onPressed: () {
-                            _showButtonPressDialog(context, 'Google (dark)');
+                             // CONTEXT
                           },
                         ),
                         Divider(),
